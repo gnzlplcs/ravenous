@@ -28,6 +28,7 @@ class SearchBar extends React.Component {
           <input placeholder="Where?" />
         </div>
         <div className="SearchBar-submit">
+        {/* eslint-disable-next-line */}
           <a>Let's Go</a>
         </div>
       </div>

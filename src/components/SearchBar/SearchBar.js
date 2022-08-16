@@ -14,6 +14,21 @@ class SearchBar extends React.Component {
       "Highest Rated": "rating",
       "Most Reviewed": "review_count",
     };
+    this.handleTermChange = this.handleTermChange.bind(this);
+    this.handleLocationChange = this.handleLocationChange.bind(this);
+  }
+
+  handleSortByChange(sortByOption) {
+    this.setState({ sortBy: sortByOption });
+  }
+
+  handleTermChange(e) {
+    this.setState({ term: e.target.value });
+    console.log(this.state.term);
+  }
+
+  handleLocationChange(e) {
+    this.setState({ location: e.target.value });
   }
 
   getSortByClass(sortByOption) {
@@ -22,10 +37,6 @@ class SearchBar extends React.Component {
     } else {
       return "";
     }
-  }
-
-  handleSortByChange(sortByOption) {
-    this.setState({ sortBy: sortByOption });
   }
 
   renderSortByOptions() {
